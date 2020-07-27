@@ -7,7 +7,7 @@ MobArena a game where you have to fight against monsters, each round will increa
 
 # Videos
 - Trailer: https://www.youtube.com/watch?v=lapRFRjKVq8&t
-- Configuration example: 
+- Configuration example: https://youtu.be/tCREOMVp5hc
 
 # Commands
 - /mba npc
