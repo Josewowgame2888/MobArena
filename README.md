@@ -12,6 +12,16 @@ MobArena a game where you have to fight against monsters, each round will increa
 - /mba spawn <name> <1-4>
 - /mba mob_spawn <name> <1-6>
 - /mba save <name>
+  
+# Mobs
+- Zombie
+- Skeleton
+- Spider
+- ZombiePigman
+- WitherSkeleton
+- Witch
+- Silverfish
+- Ravager
 
 ### License
 
