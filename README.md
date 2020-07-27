@@ -5,6 +5,16 @@
 # MobArena
 MobArena a game where you have to fight against monsters, each round will increase the number of monsters, the level of life of the monsters and the type of monster. Collect gold nuggets to upgrade your weaponry and buy items that help defeat monsters. Players who survive round 20 will win or when there is only 1 player left!
 
+# Trailer
+
+<object width="425" height="350">
+  <param name="movie" value="https://www.youtube.com/watch?v=lapRFRjKVq8&t" />
+  <param name="wmode" value="transparent" />
+  <embed src="https://www.youtube.com/watch?v=lapRFRjKVq8&t"
+         type="application/x-shockwave-flash"
+         wmode="transparent" width="425" height="350" />
+</object>
+
 # Commands
 - /mba npc
 - /mba create [name] [level]
