@@ -40,6 +40,9 @@ MobArena a game where you have to fight against monsters, each round will increa
 - The game is in beta, has been tested for days and has passed the control tests, but that does not mean that it is free of bugs. If you encounter an error please notify me in the plugin source on GitHub or on my Discord Josewowgame#6256
 - The base of the mobs was inspired in Nukkit-Coders/MobPlugin
 
+# Download
+- https://cloudburstmc.org/resources/mobarena-minigame.522/
+
 
 ### License
 
