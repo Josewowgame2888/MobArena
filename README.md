@@ -27,6 +27,20 @@ MobArena a game where you have to fight against monsters, each round will increa
 - Silverfish
 - Ravager
 
+# Characteristics
+- Supports multi arenas
+- Easy and simple step arena setup
+- NPC to join the game
+- Matching arena search system
+- The maximum number of mobs is 26
+- The store is fair and all the items can be bought with the gold nuggets
+- Some mobs drop two gold nuggets
+
+# Notes
+- The game is in beta, has been tested for days and has passed the control tests, but that does not mean that it is free of bugs. If you encounter an error please notify me in the plugin source on GitHub or on my Discord Josewowgame#6256
+- The base of the mobs was inspired in Nukkit-Coders/MobPlugin
+
+
 ### License
 
     Adapted from the Wizardry License
