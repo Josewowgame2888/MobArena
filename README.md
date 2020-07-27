@@ -7,11 +7,11 @@ MobArena a game where you have to fight against monsters, each round will increa
 
 # Commands
 - /mba npc
-- /mba create <name> <level>
-- /mba lobby <name>
-- /mba spawn <name> <1-4>
-- /mba mob_spawn <name> <1-6>
-- /mba save <name> <name>
+- /mba create [name] <level>
+- /mba lobby [name]
+- /mba spawn [name] <1-4>
+- /mba mob_spawn [name] <1-6>
+- /mba save [name]
   
 # Mobs
 - Zombie
