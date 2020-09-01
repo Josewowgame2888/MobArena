@@ -5,7 +5,7 @@ import cn.nukkit.math.AxisAlignedBB;
 import cn.nukkit.math.SimpleAxisAlignedBB;
 import cn.nukkit.math.Vector3;
 import org.mobarena.utils.Utils;
-import org.mobarena.utils.mobs.WalkingEntity;
+import org.mobarena.utils.mobs.MobArenaWalkingEntity;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,18 +20,18 @@ public class WalkerRouteFinder extends SimpleRouteFinder {
 
     private int searchLimit = 100;
 
-    public WalkerRouteFinder(WalkingEntity entity) {
+    public WalkerRouteFinder(MobArenaWalkingEntity entity) {
         super(entity);
         this.level = entity.getLevel();
     }
 
-    public WalkerRouteFinder(WalkingEntity entity, Vector3 start) {
+    public WalkerRouteFinder(MobArenaWalkingEntity entity, Vector3 start) {
         super(entity);
         this.level = entity.getLevel();
         this.start = start;
     }
 
-    public WalkerRouteFinder(WalkingEntity entity, Vector3 start, Vector3 destination) {
+    public WalkerRouteFinder(MobArenaWalkingEntity entity, Vector3 start, Vector3 destination) {
         super(entity);
         this.level = entity.getLevel();
         this.start = start;

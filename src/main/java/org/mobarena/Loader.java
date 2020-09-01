@@ -76,15 +76,15 @@ public class Loader extends PluginBase {
         getServer().getScheduler().scheduleRepeatingTask(new UpdateNpcTask(), 20);
 
         //entities
-        Entity.registerEntity(Zombie.class.getSimpleName(), Zombie.class);
-        Entity.registerEntity(Skeleton.class.getSimpleName(), Skeleton.class);
-        Entity.registerEntity(Spider.class.getSimpleName(), Spider.class);
-        Entity.registerEntity(ZombiePigman.class.getSimpleName(), ZombiePigman.class);
-        Entity.registerEntity(WitherSkeleton.class.getSimpleName(), WitherSkeleton.class);
-        Entity.registerEntity(Witch.class.getSimpleName(), Witch.class);
-        Entity.registerEntity(Zoglin.class.getSimpleName(), Zoglin.class);
-        Entity.registerEntity(Silverfish.class.getSimpleName(), Silverfish.class);
-        Entity.registerEntity(Ravager.class.getSimpleName(), Ravager.class);
+        Entity.registerEntity(MobArenaZombie.class.getSimpleName(), MobArenaZombie.class);
+        Entity.registerEntity(MobArenaSkeleton.class.getSimpleName(), MobArenaSkeleton.class);
+        Entity.registerEntity(MobArenaSpider.class.getSimpleName(), MobArenaSpider.class);
+        Entity.registerEntity(MobArenaMobArenaZombiePigman.class.getSimpleName(), MobArenaMobArenaZombiePigman.class);
+        Entity.registerEntity(MobArenaWitherSkeleton.class.getSimpleName(), MobArenaWitherSkeleton.class);
+        Entity.registerEntity(MobArenaWitch.class.getSimpleName(), MobArenaWitch.class);
+        Entity.registerEntity(MobArenaZoglin.class.getSimpleName(), MobArenaZoglin.class);
+        Entity.registerEntity(MobArenaSilverfish.class.getSimpleName(), MobArenaSilverfish.class);
+        Entity.registerEntity(MobArenaRavager.class.getSimpleName(), MobArenaRavager.class);
         Entity.registerEntity(NPC.class.getSimpleName(), NPC.class);
     }
 

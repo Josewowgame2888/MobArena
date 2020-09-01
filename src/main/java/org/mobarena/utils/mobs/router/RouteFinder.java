@@ -2,7 +2,7 @@ package org.mobarena.utils.mobs.router;
 
 import cn.nukkit.level.Level;
 import cn.nukkit.math.Vector3;
-import org.mobarena.utils.mobs.WalkingEntity;
+import org.mobarena.utils.mobs.MobArenaWalkingEntity;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public abstract class RouteFinder {
 
     protected int current = 0;
 
-    public WalkingEntity entity;
+    public MobArenaWalkingEntity entity;
 
     protected Vector3 start;
     protected Vector3 destination;
@@ -28,13 +28,13 @@ public abstract class RouteFinder {
 
     protected boolean reachable = true;
 
-    RouteFinder(WalkingEntity entity) {
+    RouteFinder(MobArenaWalkingEntity entity) {
         Objects.requireNonNull(entity,"RouteFinder: entity can not be null");
         this.entity = entity;
         this.level = entity.getLevel();
     }
 
-    public WalkingEntity getEntity() {
+    public MobArenaWalkingEntity getEntity() {
         return entity;
     }
 

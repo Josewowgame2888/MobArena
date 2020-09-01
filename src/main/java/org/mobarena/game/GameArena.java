@@ -13,7 +13,7 @@ import cn.nukkit.utils.DummyBossBar;
 import org.mobarena.Loader;
 import org.mobarena.utils.BossBar;
 import org.mobarena.utils.Utils;
-import org.mobarena.utils.mobs.BaseMob;
+import org.mobarena.utils.mobs.MobArenaBaseMob;
 
 public class GameArena {
     public String id;
@@ -107,7 +107,7 @@ public class GameArena {
     public int getCountMobs() {
         int i = 0;
         for (Entity entity : this.level.getEntities()) {
-            if (entity instanceof BaseMob) {
+            if (entity instanceof MobArenaBaseMob) {
                 i++;
             }
         }
@@ -124,8 +124,18 @@ public class GameArena {
 
     public void removeAllMobs() {
         for (Entity entity : this.level.getEntities()) {
-            if (entity instanceof BaseMob ) {
+            if (entity instanceof MobArenaBaseMob) {
                 entity.close();
+            }
+        }
+    }
+
+    public void removeNotFromGame() {
+        for (Entity entity : this.level.getEntities()) {
+            if (!(entity instanceof MobArenaBaseMob)) {
+                if (!(entity instanceof Player)) {
+                    entity.close();
+                }
             }
         }
     }
@@ -159,7 +169,7 @@ public class GameArena {
              * TOTAL: 3
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
         }
         if (round == 2) {
@@ -168,7 +178,7 @@ public class GameArena {
              * TOTAL: 4
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
         }
         if (round == 3) {
@@ -178,10 +188,10 @@ public class GameArena {
              * TOTAL: 6
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
         }
         if (round == 4) {
@@ -191,10 +201,10 @@ public class GameArena {
              * TOTAL: 8
              */
             for (int i = 0; i < 5; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
         }
         if (round == 5) {
@@ -204,10 +214,10 @@ public class GameArena {
              * TOTAL: 10
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
         }
         if (round == 6) {
@@ -218,13 +228,13 @@ public class GameArena {
              * TOTAL: 13
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
         }
         if (round == 7) {
@@ -235,13 +245,13 @@ public class GameArena {
              * TOTAL: 15
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 5; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
         }
         if (round == 8) {
@@ -252,13 +262,13 @@ public class GameArena {
              * TOTAL: 17
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 9; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
         }
         if (round == 9) {
@@ -270,16 +280,16 @@ public class GameArena {
              * TOTAL: 20
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 8; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
         }
         if (round == 10) {
@@ -291,16 +301,16 @@ public class GameArena {
              * TOTAL: 22
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 1; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 12; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
         }
         if (round == 11) {
@@ -312,16 +322,16 @@ public class GameArena {
              * TOTAL: 24
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Zombie");
+                this.spawnEntity("MobArenaZombie");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 8; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
         }
         if (round == 12) {
@@ -332,13 +342,13 @@ public class GameArena {
              * TOTAL: 25
              */
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 9; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 9; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
         }
         if (round == 13) {
@@ -350,16 +360,16 @@ public class GameArena {
              * TOTAL: 26
              */
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 8; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
         }
         if (round == 14) {
@@ -371,16 +381,16 @@ public class GameArena {
              * TOTAL: 26
              */
             for (int i = 0; i < 3; i++) {
-                this.spawnEntity("Spider");
+                this.spawnEntity("MobArenaSpider");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 9; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
         }
         if (round == 15) {
@@ -392,16 +402,16 @@ public class GameArena {
              * TOTAL: 20
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 7; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 9; i++) {
-                this.spawnEntity("Zoglin");
+                this.spawnEntity("MobArenaZoglin");
             }
         }
         if (round == 16) {
@@ -413,16 +423,16 @@ public class GameArena {
              * TOTAL: 20
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("ZombiePigman");
+                this.spawnEntity("MobArenaZombiePigman");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 10; i++) {
-                this.spawnEntity("Zoglin");
+                this.spawnEntity("MobArenaZoglin");
             }
         }
         if (round == 17) {
@@ -434,16 +444,16 @@ public class GameArena {
              * TOTAL: 18
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zoglin");
+                this.spawnEntity("MobArenaZoglin");
             }
             for (int i = 0; i < 6; i++) {
-                this.spawnEntity("Silverfish");
+                this.spawnEntity("MobArenaSilverfish");
             }
         }
         if (round == 18) {
@@ -455,16 +465,16 @@ public class GameArena {
              * TOTAL: 18
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("WitherSkeleton");
+                this.spawnEntity("MobArenaWitherSkeleton");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zoglin");
+                this.spawnEntity("MobArenaZoglin");
             }
             for (int i = 0; i < 10; i++) {
-                this.spawnEntity("Silverfish");
+                this.spawnEntity("MobArenaSilverfish");
             }
         }
         if (round == 19) {
@@ -476,16 +486,16 @@ public class GameArena {
              * TOTAL: 18
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Zoglin");
+                this.spawnEntity("MobArenaZoglin");
             }
             for (int i = 0; i < 10; i++) {
-                this.spawnEntity("Silverfish");
+                this.spawnEntity("MobArenaSilverfish");
             }
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Ravager");
+                this.spawnEntity("MobArenaRavager");
             }
         }
         if (round == 20) {
@@ -497,16 +507,16 @@ public class GameArena {
              * TOTAL: 18
              */
             for (int i = 0; i < 2; i++) {
-                this.spawnEntity("Witch");
+                this.spawnEntity("MobArenaWitch");
             }
             for (int i = 0; i < 4; i++) {
-                this.spawnEntity("Skeleton");
+                this.spawnEntity("MobArenaSkeleton");
             }
             for (int i = 0; i < 8; i++) {
-                this.spawnEntity("Silverfish");
+                this.spawnEntity("MobArenaSilverfish");
             }
             for (int i = 0; i < 10; i++) {//hard :D
-                this.spawnEntity("Ravager");
+                this.spawnEntity("MobArenaRavager");
             }
         }
     }
