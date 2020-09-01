@@ -120,25 +120,17 @@ public class Utils {
     }
 
     public static CompoundTag createBaseNBT(Player sender) {
+        sender.saveNBT();
         CompoundTag nbt = new CompoundTag()
-                .putList(new ListTag<>("Pos")
-                        .add(new DoubleTag("", sender.x))
-                        .add(new DoubleTag("", sender.y))
-                        .add(new DoubleTag("", sender.z)))
+                .put("Pos", sender.namedTag.get("Pos").copy())
                 .putList(new ListTag<DoubleTag>("Motion")
                         .add(new DoubleTag("", 0))
                         .add(new DoubleTag("", 0))
                         .add(new DoubleTag("", 0)))
-                .putList(new ListTag<FloatTag>("Rotation")
-                        .add(new FloatTag("", (float) sender.getYaw()))
-                        .add(new FloatTag("", (float) sender.getPitch())))
+                .put("Rotation", sender.namedTag.get("Rotation").copy())
                 .putBoolean("Invulnerable", true)
                 .putFloat("scale", 1);
-        nbt.putCompound("Skin", new CompoundTag()
-                .putByteArray("Data", sender.getSkin().getSkinData().data)
-                .putString("ModelId", UUID.randomUUID().toString())
-                .putString("GeometryName", "geometry.humanoid.custom")
-                .putByteArray("GeometryData", sender.getSkin().getGeometryData().getBytes(StandardCharsets.UTF_8)));
+        nbt.put("Skin", sender.namedTag.get("Skin").copy());
         nbt.putBoolean("ishuman", true);
         nbt.putString("Item", sender.getInventory().getItemInHand().getName());
         nbt.putString("Helmet", sender.getInventory().getHelmet().getName());
