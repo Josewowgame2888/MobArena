@@ -50,6 +50,8 @@ public class MatchTask extends Task {
             delayed = 10;
         }
 
+        arena.removeNotFromGame();
+
         //bossbar
         for (Player player : arena.level.getPlayers().values()) {
             if (BossBar.hasBossBar(player)) {

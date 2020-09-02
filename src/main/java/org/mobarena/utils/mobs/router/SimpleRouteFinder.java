@@ -1,9 +1,9 @@
 package org.mobarena.utils.mobs.router;
 
-import org.mobarena.utils.mobs.WalkingEntity;
+import org.mobarena.utils.mobs.MobArenaWalkingEntity;
 
 public class SimpleRouteFinder extends RouteFinder {
-    public SimpleRouteFinder(WalkingEntity entity) {
+    public SimpleRouteFinder(MobArenaWalkingEntity entity) {
         super(entity);
     }
 
