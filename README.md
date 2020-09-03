@@ -2,7 +2,7 @@
   <img src="https://github.com/Josewowgame2888/MobArena/blob/master/mobarena.png" width="100%" heigth="8%"/>
 </p>
 
-# MobArena
+# MobArena for NukkitPetteriM1Edition
 MobArena a game where you have to fight against monsters, each round will increase the number of monsters, the level of life of the monsters and the type of monster. Collect gold nuggets to upgrade your weaponry and buy items that help defeat monsters. Players who survive round 20 will win or when there is only 1 player left!
 
 # Videos
@@ -39,6 +39,7 @@ MobArena a game where you have to fight against monsters, each round will increa
 # Notes
 - The game is in beta, has been tested for days and has passed the control tests, but that does not mean that it is free of bugs. If you encounter an error please notify me in the plugin source on GitHub or on my Discord Josewowgame#6256
 - The base of the mobs was inspired in Nukkit-Coders/MobPlugin
+- This is for NukkitPetteriM1Edition
 
 # Download
 - https://cloudburstmc.org/resources/mobarena-minigame.522/
