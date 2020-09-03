@@ -353,7 +353,7 @@ public class WalkerRouteFinder extends SimpleRouteFinder {
         double radius = (this.entity.getWidth() * this.entity.getScale()) / 2 + 0.1;
         double height = this.entity.getHeight() * this.entity.getScale();
         for (Vector3 vector3 : list) {
-            AxisAlignedBB bb = new SimpleAxisAlignedBB(vector3.getX() - radius, vector3.getY(), vector3.getZ() - radius, vector3.getX() + radius, vector3.getY() + height, vector3.getZ() + radius);
+            AxisAlignedBB bb = new AxisAlignedBB(vector3.getX() - radius, vector3.getY(), vector3.getZ() - radius, vector3.getX() + radius, vector3.getY() + height, vector3.getZ() + radius);
             if (this.level.getCollisionBlocks(bb, true).length != 0) return true;
 
             boolean xIsInt = vector3.getX() % 1 == 0;
