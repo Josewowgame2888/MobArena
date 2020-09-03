@@ -2,4 +2,6 @@ name: MobArenaMinigame
 main: org.mobarena.Loader
 version: "${pom.version}"
 api: ["1.0.9"]
-author: Josewowgame
+authors:
+  - Josewowgame
+  - good777LUCKY
