@@ -222,10 +222,6 @@ public abstract class MobArenaBaseMob extends EntityCreature implements EntityAg
         return false;
     }
 
-    protected float getMountedYOffset() {
-        return getHeight() * 0.75F;
-    }
-
     private void addHealth(int health) {
         this.setMaxHealth(this.getMaxHealth() + health);
         this.setHealth(this.getHealth() + health);
