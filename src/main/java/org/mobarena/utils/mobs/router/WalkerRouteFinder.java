@@ -2,7 +2,6 @@ package org.mobarena.utils.mobs.router;
 
 import cn.nukkit.block.Block;
 import cn.nukkit.math.AxisAlignedBB;
-import cn.nukkit.math.SimpleAxisAlignedBB;
 import cn.nukkit.math.Vector3;
 import org.mobarena.utils.Utils;
 import org.mobarena.utils.mobs.MobArenaWalkingEntity;
@@ -133,7 +132,7 @@ public class WalkerRouteFinder extends SimpleRouteFinder {
     private boolean isPassable(Vector3 vector3) {
         double radius = (this.entity.getWidth() * this.entity.getScale()) / 2;
         float height = this.entity.getHeight() * this.entity.getScale();
-        AxisAlignedBB bb = new SimpleAxisAlignedBB(vector3.getX() - radius, vector3.getY(), vector3.getZ() - radius, vector3.getX() + radius, vector3.getY() + height, vector3.getZ() + radius);
+        AxisAlignedBB bb = new AxisAlignedBB(vector3.getX() - radius, vector3.getY(), vector3.getZ() - radius, vector3.getX() + radius, vector3.getY() + height, vector3.getZ() + radius);
         return this.level.getCollisionBlocks(bb, true).length == 0 && !this.level.getBlock(vector3.add(0, -1, 0), false).canPassThrough();
     }
 
